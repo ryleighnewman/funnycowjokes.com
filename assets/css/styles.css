@@ -6,16 +6,16 @@ body {
     color: #333;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* ensures footer stays at the bottom */
     min-height: 100vh;
 }
 
 /* centered container with modern look */
 .container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
+    background-color: rgba(255, 255, 255, 0.9); /* slightly transparent white */
     padding: 40px;
-    border-radius: 0; /* no rounded corners */
+    border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 400px;
@@ -25,35 +25,30 @@ body {
 
 /* heading style */
 h1 {
-    font-size: 2.5em;
+    font-size: 32px;
     margin-bottom: 30px;
-    color: #ffffff; /* white text color */
-    text-transform: uppercase;
+    color: #2c3e50; /* dark blue-grey color */
 }
 
 /* joke display box style */
 .joke-box {
-    font-size: 1.2em;
-    line-height: 1.5;
+    font-size: 20px;
     min-height: 70px;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
-    border-radius: 0; /* no rounded corners */
+    background-color: #f9f9f9; /* light grey background */
+    border-radius: 10px;
     border: 1px solid #ddd;
-    color: #ffffff; /* white text color */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* inset shadow for depth */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    word-wrap: break-word; /* ensures long words wrap to the next line */
 }
 
 /* button style */
 button {
     padding: 15px 30px;
-    font-size: 1.1em;
+    font-size: 18px;
     background-color: #28a745;
     color: white;
     border: none;
@@ -69,17 +64,17 @@ button:hover {
 
 /* footer style */
 footer {
-    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
+    background-color: rgba(255, 255, 255, 0.8); /* slightly transparent white */
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    color: #ffffff; /* white text color */
     margin-top: auto; /* push footer to the bottom */
 }
 
 footer p {
     margin: 0;
     font-size: 14px;
+    color: #555;
 }
 
 footer a {
@@ -99,16 +94,16 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 28px;
     }
 
     .joke-box {
-        font-size: 1.1em;
+        font-size: 18px;
         padding: 15px;
     }
 
     button {
         padding: 12px 25px;
-        font-size: 1em;
+        font-size: 16px;
     }
 }
