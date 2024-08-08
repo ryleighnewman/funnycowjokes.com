@@ -1,7 +1,7 @@
 /* Set the full-screen cow pattern background */
 body {
     font-family: Arial, sans-serif;
-    background: url(/assets/images/background.png') no-repeat center center fixed;
+    background: url('/assets/images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     margin: 0;
