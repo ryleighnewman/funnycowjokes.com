@@ -13,9 +13,9 @@ body {
 /* centered container with modern look */
 .container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7); /* darker transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
     padding: 40px;
-    border-radius: 15px;
+    border-radius: 0; /* no rounded corners */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 400px;
@@ -25,31 +25,35 @@ body {
 
 /* heading style */
 h1 {
-    font-size: 32px;
+    font-size: 2.5em;
     margin-bottom: 30px;
     color: #ffffff; /* white text color */
+    text-transform: uppercase;
 }
 
 /* joke display box style */
 .joke-box {
-    font-size: 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
     min-height: 70px;
     margin-bottom: 30px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* light transparent grey background */
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
+    border-radius: 0; /* no rounded corners */
     border: 1px solid #ddd;
     color: #ffffff; /* white text color */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* inset shadow for depth */
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    word-wrap: break-word; /* ensures long words wrap to the next line */
 }
 
 /* button style */
 button {
     padding: 15px 30px;
-    font-size: 18px;
+    font-size: 1.1em;
     background-color: #28a745;
     color: white;
     border: none;
@@ -65,7 +69,7 @@ button:hover {
 
 /* footer style */
 footer {
-    background-color: rgba(0, 0, 0, 0.7); /* darker transparent background */
+    background-color: rgba(0, 0, 0, 0.7); /* black transparent background */
     text-align: center;
     padding: 10px 0;
     width: 100%;
@@ -95,16 +99,16 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 2em;
     }
 
     .joke-box {
-        font-size: 18px;
+        font-size: 1.1em;
         padding: 15px;
     }
 
     button {
         padding: 12px 25px;
-        font-size: 16px;
+        font-size: 1em;
     }
 }
