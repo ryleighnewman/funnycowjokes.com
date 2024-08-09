@@ -6,8 +6,9 @@ body {
     color: #333;
     margin: 0;
     display: flex;
-    flex-direction: column; /* ensures footer stays at the bottom */
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* centered container with modern look */
@@ -19,8 +20,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 400px;
-    margin: auto;
-    flex-grow: 1; /* allows container to grow and push footer down */
 }
 
 /* heading style */
@@ -60,30 +59,6 @@ button {
 button:hover {
     background-color: #218838;
     transform: scale(1.05); /* slight scaling effect on hover */
-}
-
-/* footer style */
-footer {
-    background-color: rgba(255, 255, 255, 0.8); /* slightly transparent white */
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    margin-top: auto; /* push footer to the bottom */
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 /* responsive adjustments for smaller screens */
