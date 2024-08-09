@@ -18,6 +18,18 @@
     <footer>
         <p>&copy; 2024 <a href="https://github.com/ryleighnewman" target="_blank">Ryleigh Newman</a></p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('touchend', function () {
+                    button.style.pointerEvents = 'none'; // Disable pointer events to prevent the button from staying active
+                    setTimeout(function () {
+                        button.style.pointerEvents = ''; // Re-enable pointer events after the delay
+                    }, 300); // Adjust this delay as necessary
+                });
+            });
+        });
+    </script>
 </body>
 </html>
