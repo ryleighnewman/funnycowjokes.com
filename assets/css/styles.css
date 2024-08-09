@@ -10,6 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 /* Outer container to fix resolution and center content */
@@ -21,13 +22,17 @@ body {
     max-width: 1200px;
     height: 100%;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px; /* Adjusted padding */
 }
 
 /* Inner container for content with fixed resolution */
 .inner-container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
-    padding: 20px; /* Reduced padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     max-width: 400px;
@@ -36,39 +41,39 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Ensures content is centered vertically */
 }
 
 /* Heading style */
 h1 {
-    font-size: 28px; /* Smaller font size for the header */
-    margin-bottom: 20px;
+    font-size: 20px; /* Smaller font size for the header */
+    margin-bottom: 15px;
     color: #ffffff; /* White color for text */
 }
 
 /* Joke display box style */
 .joke-box {
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin: 0 auto 20px auto; /* Reduced margin */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter transparent background */
+    margin-bottom: 20px; /* Adjusted margin */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: flex-start; /* Align text to the top */
-    align-items: flex-start;
-    min-height: 150px;
-    height: -webkit-min-content;
+    justify-content: center; /* Center text vertically within the box */
+    align-items: center;
     color: #ffffff; /* White color for text */
 }
 
 /* Button style */
 button {
-    padding: 18px 36px; /* Increased padding */
-    font-size: 18px;
+    padding: 12px 24px; /* Reduced padding */
+    font-size: 16px; /* Smaller font size */
     background-color: #28a745;
     color: white;
     border: none;
@@ -76,6 +81,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-top: 10px; /* Small margin to separate from the joke box */
 }
 
 button:hover {
@@ -90,7 +96,7 @@ footer {
     font-size: 12px; /* Smaller font size */
     text-align: center;
     width: 100%;
-    position: absolute;
+    position: fixed; /* Ensure the footer sticks to the bottom */
     bottom: 0;
     left: 0;
     color: #666666; /* Slightly darker text color */
@@ -100,22 +106,23 @@ footer {
 @media (max-width: 600px) {
     .inner-container {
         width: 90%;
-        padding: 30px;
+        padding: 15px;
+        min-height: 50vh; /* Ensure proper centering on small screens */
     }
 
     h1 {
-        font-size: 24px; /* Further reduced on small screens */
+        font-size: 18px; /* Further reduced on small screens */
     }
 
     .joke-box {
-        font-size: 18px;
-        padding: 15px;
+        font-size: 16px;
+        padding: 10px;
         width: 100%;
     }
 
     button {
-        padding: 15px 30px;
-        font-size: 16px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     footer {
