@@ -18,7 +18,6 @@ body {
     align-items: center;
     overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); /* For notched devices */
-    position: relative; /* Necessary for positioning absolute elements relative to the viewport */
 }
 
 /* Wrapper to limit width */
@@ -30,30 +29,19 @@ body {
     background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
     height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; /* Divide into three equal sections */
     align-items: center;
+    justify-items: center;
     position: relative;
-}
-
-/* Outer container to center content */
-.outer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; /* Ensure equal spacing between elements */
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 20px;
 }
 
 /* Heading style */
 h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
-    width: 100%;
     text-align: center;
+    grid-row: 1 / 2; /* Place in the first section */
 }
 
 /* Joke display box style */
@@ -69,13 +57,10 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
-    position: fixed; /* Fixed positioning relative to the viewport */
-    top: 50%; /* Center the text box vertically */
-    left: 50%; /* Center the text box horizontally */
-    transform: translate(-50%, -50%); /* Offset the text box by half of its own size */
+    grid-row: 2 / 3; /* Place in the second section */
 }
 
-/* Button style - Independent positioning */
+/* Button style */
 button {
     padding: 12px 24px;
     font-size: 18px;
@@ -88,15 +73,12 @@ button {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 300px; /* Fixed width for the button */
     text-align: center;
-    position: fixed; /* Fixed positioning relative to the viewport */
-    bottom: 10%; /* Position the button slightly above the bottom of the viewport */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset the button horizontally by half of its width */
+    grid-row: 3 / 4; /* Place in the third section */
 }
 
 button:hover {
     background-color: #218838;
-    transform: translateX(-50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
+    transform: scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 /* Footer at the bottom */
@@ -114,24 +96,6 @@ footer {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-    body {
-        height: 100%;
-        min-height: -webkit-fill-available; /* Adapt to address bar height on mobile browsers */
-        padding: 0;
-    }
-
-    .outer-container {
-        height: 100%;
-        min-height: -webkit-fill-available;
-        justify-content: space-evenly; /* Maintain equal spacing */
-    }
-
-    .inner-container {
-        width: calc(100% - 40px); /* Ensuring space from the edges */
-        padding: 30px;
-        max-width: 100%;
-    }
-
     h1 {
         font-size: 28px;
     }
@@ -141,18 +105,12 @@ footer {
         padding: 15px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-        top: 50%; /* Keep text box centered */
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     button {
         padding: 12px 20px;
         font-size: 16px;
         width: 300px; /* Fixed width for the button */
-        bottom: 10%; /* Maintain button position slightly above the bottom */
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     footer {
