@@ -108,16 +108,32 @@ footer {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-    h1 {
-        font-size: 1.75rem; /* Adjust font size for smaller screens */
-        margin-bottom: 2.5rem; /* Match margin with the spacing between text box and button */
-        top: -1.5rem; /* Adjust positioning */
-    }
+   /* Heading style */
+h1 {
+    font-size: 2rem; /* Use relative units for font size */
+    color: #ffffff; /* White color for text */
+    text-align: center;
+    margin-bottom: 4rem; /* Increase margin to add more space below the heading */
+    position: relative;
+    top: -1.5rem; /* Adjust positioning to be more responsive */
+}
 
-    .joke-box {
-        font-size: 1rem; /* Adjust font size */
-        padding: 1.25rem; /* Adjust padding for smaller screens */
-    }
+/* Joke display box style - Independent of the heading */
+.joke-box {
+    font-size: 1.25rem; /* Adjusted font size */
+    width: calc(100% - 2rem); /* Ensuring space from the edges */
+    max-width: 500px; /* Set maximum width to prevent it from expanding too much */
+    padding: 1.5rem; /* Increase padding inside the text box */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: #ffffff; /* White color for text */
+    text-align: center; /* Ensure multiline text is centered */
+    border: none; /* Remove white outline */
+    margin: 3rem 0; /* Add more margin to create space above and below the joke box */
+}
 
     button {
         padding: 0.75rem 1.5rem; /* Adjust padding for smaller screens */

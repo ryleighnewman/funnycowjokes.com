@@ -21,15 +21,14 @@ document.getElementById('joke-button').addEventListener('click', function() {
     // Display the joke
     jokeBox.textContent = getRandomJoke();
 
-    // Temporarily disable the button to prevent it from staying in a pressed state
-    jokeButton.disabled = true;
-    jokeButton.style.backgroundColor = '#1e7e34'; // Optional: change the color to indicate press
-
+    // Manually handle the "pressed" state of the button
+    jokeButton.classList.add('pressed');
+    
+    // Set a timeout to remove the "pressed" state
     setTimeout(function() {
-        jokeButton.disabled = false;
-        jokeButton.style.backgroundColor = '#28a745'; // Reset to the original color
+        jokeButton.classList.remove('pressed');
         jokeButton.blur(); // Remove focus from the button
-    }, 300); // Adjust the delay time as needed
+    }, 150); // Adjust the delay time as needed
 });
 
 // Set an initial joke when the page loads
