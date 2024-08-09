@@ -1,3 +1,4 @@
+/* Full-screen cow pattern background */
 body {
     font-family: Arial, sans-serif;
     background: url('/assets/images/background.png') no-repeat center center fixed;
@@ -5,47 +6,49 @@ body {
     color: #333;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full-screen height */
+    overflow: hidden; /* Prevent scrolling if content overflows */
 }
 
-/* container now flex-grow to take available space */
-.container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 80%;
-    max-width: 400px;
-    flex-grow: 1; /* Make container take available space */
+/* Outer container to fix resolution and center content */
+.outer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
     width: 100%;
-    flex-shrink: 0; /* Ensure footer stays at the bottom */
+    max-width: 1200px; /* Set a fixed max-width */
+    height: 100%;
+    box-sizing: border-box;
 }
 
-/* heading style */
+/* Inner container for content with fixed resolution */
+.inner-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* Heading style */
 h1 {
     font-size: 32px;
     margin-bottom: 30px;
     color: #2c3e50;
 }
 
-/* joke display box style */
+/* Joke display box style */
 .joke-box {
     font-size: 20px;
-    width: 70%;
+    width: 100%;
+    max-width: 300px; /* Maintain box within bounds */
     height: auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto; /* Center and add margin */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -54,12 +57,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 300px;
     min-height: 150px;
     height: -webkit-min-content;
 }
 
-/* button style */
+/* Button style */
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -76,9 +78,20 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* responsive adjustments for smaller screens */
+/* Footer at the bottom */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-    .container {
+    .inner-container {
         width: 90%;
         padding: 30px;
     }
@@ -90,8 +103,7 @@ button:hover {
     .joke-box {
         font-size: 18px;
         padding: 15px;
-        width: 90%;
-        max-width: none;
+        width: 100%;
     }
 
     button {
