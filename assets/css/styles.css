@@ -42,6 +42,7 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
+    margin-bottom: auto; /* Ensure some spacing below */
 }
 
 /* Joke display box style */
@@ -57,6 +58,7 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
+    margin: auto 0; /* Center the text box vertically with equal space above and below */
 }
 
 /* Button style */
@@ -72,6 +74,7 @@ button {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 320px; /* Slightly increase the width for the button */
     text-align: center;
+    margin-top: auto; /* Ensure some spacing above */
 }
 
 button:hover {
