@@ -27,18 +27,21 @@ body {
 .inner-container {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
-    padding: 40px;
+    padding: 20px; /* Reduced padding */
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     width: 80%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Heading style */
 h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 28px; /* Smaller font size for the header */
+    margin-bottom: 20px;
     color: #ffffff; /* White color for text */
 }
 
@@ -48,15 +51,15 @@ h1 {
     width: 100%;
     max-width: 300px;
     height: auto;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto; /* Reduced margin */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.2); /* Lighter transparent background */
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Align text to the top */
+    align-items: flex-start;
     min-height: 150px;
     height: -webkit-min-content;
     color: #ffffff; /* White color for text */
@@ -101,7 +104,7 @@ footer {
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 24px; /* Further reduced on small screens */
     }
 
     .joke-box {
