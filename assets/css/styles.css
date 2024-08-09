@@ -54,9 +54,10 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
     color: #ffffff; /* White color for text */
+    text-align: center; /* Ensure multiline text is centered */
     border: none; /* Remove white outline */
     position: fixed; /* Fixed positioning relative to the viewport */
     top: 50%; /* Center the text box vertically */
