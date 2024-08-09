@@ -42,7 +42,9 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: 40px; /* Set margin to match the spacing between text box and button */
+    margin-bottom: 60px; /* Set margin to space it properly above the text box */
+    position: relative;
+    top: -120px; /* Adjust this value to move the title higher up */
 }
 
 /* Joke display box style - Independent of the heading */
@@ -107,6 +109,7 @@ footer {
     h1 {
         font-size: 28px;
         margin-bottom: 40px; /* Match margin with the spacing between text box and button */
+        top: -80px; /* Adjust this value for mobile to move the title higher */
     }
 
     .joke-box {
@@ -114,7 +117,7 @@ footer {
         padding: 20px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-        top: 45%; /* Adjusted position for mobile */
+        top: 50%; /* Keep the text box centered */
         left: 50%;
         transform: translate(-50%, -50%);
     }
