@@ -42,7 +42,7 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: 300px; /* Increase bottom margin to create space above the text box */
+    margin-bottom: 60px; /* Set margin to match the spacing between text box and button */
 }
 
 /* Joke display box style - Independent of the heading */
@@ -105,7 +105,7 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
-        margin-bottom: 80px; /* Adjust margin for smaller screens */
+        margin-bottom: 60px; /* Adjust margin for smaller screens */
     }
 
     .joke-box {
