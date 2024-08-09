@@ -5,15 +5,14 @@ body {
     background-size: cover;
     color: #333;
     margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     overflow: hidden;
-    position: relative;
 }
 
-/* Outer container to fix resolution and center content */
+/* Outer container to center content */
 .outer-container {
     display: flex;
     justify-content: center;
@@ -21,8 +20,6 @@ body {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
-    border-radius: 15px;
     padding: 20px;
 }
 
@@ -30,7 +27,7 @@ body {
 .inner-container {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Black with more transparency */
-    padding: 40px; /* More padding for better spacing */
+    padding: 40px;
     border-radius: 15px;
     max-width: 500px;
     width: 100%;
@@ -46,13 +43,13 @@ h1 {
     font-size: 36px; /* Larger font size for the header */
     margin-bottom: 30px;
     color: #ffffff; /* White color for text */
+    width: 100%;
 }
 
 /* Joke display box style */
 .joke-box {
     font-size: 22px; /* Slightly larger font size */
     width: 100%;
-    max-width: 400px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
@@ -76,7 +73,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 20px; /* Increased margin for better spacing */
+    margin-top: 20px;
 }
 
 button:hover {
@@ -99,9 +96,21 @@ footer {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
+    body {
+        height: 100%;
+        min-height: -webkit-fill-available; /* Adapt to address bar height on mobile browsers */
+        display: block;
+    }
+
+    .outer-container {
+        height: 100%;
+        min-height: -webkit-fill-available;
+    }
+
     .inner-container {
         width: 90%;
         padding: 30px;
+        max-width: 100%;
     }
 
     h1 {
@@ -111,7 +120,6 @@ footer {
     .joke-box {
         font-size: 20px;
         padding: 15px;
-        width: 100%;
     }
 
     button {
