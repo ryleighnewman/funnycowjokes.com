@@ -71,12 +71,11 @@ h1 {
     text-align: center;
 }
 
-/* Joke display box style */
+/* Joke display box style - Fixed to center of screen */
 .joke-box {
     font-size: 20px; /* Adjusted font size */
     width: calc(100% - 40px); /* Ensuring space from the edges */
     max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-    margin-bottom: 20px;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
@@ -85,6 +84,10 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 50%; /* Center the text box vertically */
+    left: 50%; /* Center the text box horizontally */
+    transform: translate(-50%, -50%); /* Offset the text box by half of its own size */
 }
 
 /* Button style - Independent positioning */
@@ -152,6 +155,9 @@ footer {
         padding: 15px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
+        top: 50%; /* Keep text box centered */
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     button {
