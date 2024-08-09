@@ -9,27 +9,14 @@
 <body>
     <div class="container">
         <h1>Funny Cow Jokes</h1>
-        <p></p>
         <div class="joke-box" id="joke-box">
-        <!-- joke appear here -->
+        <!-- joke appears here -->
         </div>
         <button id="joke-button">Click for a Random Cow Joke</button>
     </div>
     <footer>
         <p>&copy; 2024 <a href="https://github.com/ryleighnewman" target="_blank">Ryleigh Newman</a></p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(button => {
-                button.addEventListener('touchend', function () {
-                    button.style.pointerEvents = 'none'; // Disable pointer events to prevent the button from staying active
-                    setTimeout(function () {
-                        button.style.pointerEvents = ''; // Re-enable pointer events after the delay
-                    }, 300); // Adjust this delay as necessary
-                });
-            });
-        });
-    </script>
+    <script src="jokes.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
