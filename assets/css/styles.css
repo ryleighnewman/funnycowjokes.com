@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 /* centered container with modern look */
@@ -20,6 +19,11 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
     max-width: 400px;
+    min-height: 100vh; /* Ensures full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensures content stacks vertically */
 }
 
 /* heading style */
@@ -32,7 +36,8 @@ h1 {
 /* joke display box style */
 .joke-box {
     font-size: 20px;
-    min-height: 70px;
+    width: 70%; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust height based on content */
     margin-bottom: 30px;
     padding: 20px;
     background-color: #f9f9f9; /* light grey background */
@@ -42,6 +47,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 300px; /* Maximum width to maintain square-like shape */
+    min-height: 150px; /* Ensure it's at least a certain height */
 }
 
 /* button style */
@@ -75,6 +82,8 @@ button:hover {
     .joke-box {
         font-size: 18px;
         padding: 15px;
+        width: 90%; /* Ensure it remains responsive */
+        max-width: none; /* Remove max-width for small screens */
     }
 
     button {
