@@ -20,12 +20,19 @@ document.getElementById('joke-button').addEventListener('click', function() {
     
     // Display the joke
     jokeBox.textContent = getRandomJoke();
+
+    // Force reflow to reset the button's animation
+    jokeButton.classList.remove('active');
     
-    // Add a small delay to ensure the button resets
+    void jokeButton.offsetWidth; // Trigger a reflow, flushing the CSS changes
+    
+    jokeButton.classList.add('active'); // Re-add the active class
+
+    // Reset the button after a short delay
     setTimeout(function() {
-        jokeButton.classList.remove('active'); // Remove the active class manually if necessary
+        jokeButton.classList.remove('active');
         jokeButton.blur(); // Remove focus from the button
-    }, 100); // Adjust the delay as needed
+    }, 300); // Adjust the delay time as needed
 });
 
 // Set an initial joke when the page loads
