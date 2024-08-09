@@ -15,7 +15,17 @@ function getRandomJoke() {
 }
 
 document.getElementById('joke-button').addEventListener('click', function() {
-    document.getElementById('joke-box').textContent = getRandomJoke();
+    const jokeBox = document.getElementById('joke-box');
+    const jokeButton = document.getElementById('joke-button');
+    
+    // Display the joke
+    jokeBox.textContent = getRandomJoke();
+    
+    // Reset the button after the click
+    jokeButton.style.pointerEvents = 'none'; // Disable button to prevent multiple clicks
+    setTimeout(function() {
+        jokeButton.style.pointerEvents = ''; // Re-enable button after a short delay
+    }, 300); // Adjust the delay time as needed
 });
 
 // Set an initial joke when the page loads
