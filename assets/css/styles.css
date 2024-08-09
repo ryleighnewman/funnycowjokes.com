@@ -25,13 +25,13 @@ body {
     background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    padding: 20px; /* Adjusted padding */
+    padding: 20px;
 }
 
 /* Inner container for content with fixed resolution */
 .inner-container {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+    background-color: rgba(255, 255, 255, 0.9); /* Light color with transparency */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -47,8 +47,8 @@ body {
 
 /* Heading style */
 h1 {
-    font-size: 20px; /* Smaller font size for the header */
-    margin-bottom: 15px;
+    font-size: 24px; /* Adjusted font size for better visibility */
+    margin-bottom: 20px;
     color: #ffffff; /* White color for text */
 }
 
@@ -65,23 +65,23 @@ h1 {
     border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center; /* Center text vertically within the box */
+    justify-content: center;
     align-items: center;
     color: #ffffff; /* White color for text */
 }
 
 /* Button style */
 button {
-    padding: 12px 24px; /* Reduced padding */
-    font-size: 16px; /* Smaller font size */
+    padding: 12px 24px; /* Adjusted padding */
+    font-size: 16px;
     background-color: #28a745;
     color: white;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    margin-top: 10px; /* Small margin to separate from the joke box */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
 }
 
 button:hover {
@@ -89,14 +89,14 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Footer at the bottom - Made smaller */
+/* Footer at the bottom */
 footer {
-    background-color: #f1f1f1;
-    padding: 8px 15px; /* Further reduced padding */
-    font-size: 12px; /* Smaller font size */
+    background-color: rgba(255, 255, 255, 0.8); /* Light color with transparency */
+    padding: 8px 15px;
+    font-size: 12px;
     text-align: center;
     width: 100%;
-    position: fixed; /* Ensure the footer sticks to the bottom */
+    position: absolute; /* Ensures footer stays at the bottom */
     bottom: 0;
     left: 0;
     color: #666666; /* Slightly darker text color */
@@ -107,11 +107,11 @@ footer {
     .inner-container {
         width: 90%;
         padding: 15px;
-        min-height: 50vh; /* Ensure proper centering on small screens */
+        min-height: 50vh;
     }
 
     h1 {
-        font-size: 18px; /* Further reduced on small screens */
+        font-size: 20px;
     }
 
     .joke-box {
@@ -126,7 +126,7 @@ footer {
     }
 
     footer {
-        padding: 6px 12px; /* Adjust footer padding on smaller screens */
-        font-size: 10px; /* Adjust footer font size on smaller screens */
+        padding: 6px 12px;
+        font-size: 10px;
     }
 }
