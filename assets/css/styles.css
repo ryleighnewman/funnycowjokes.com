@@ -42,9 +42,10 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
+    margin-bottom: auto; /* Ensure some spacing below */
 }
 
-/* Joke display box style */
+/* Joke display box style - Independent of the heading */
 .joke-box {
     font-size: 20px; /* Adjusted font size */
     width: calc(100% - 40px); /* Ensuring space from the edges */
@@ -57,7 +58,10 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
-    margin: 20px 0; /* Add margin to create spacing between elements */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 50%; /* Center the text box vertically */
+    left: 50%; /* Center the text box horizontally */
+    transform: translate(-50%, -50%); /* Offset the text box by half of its own size */
 }
 
 /* Button style - Independent of the text box */
@@ -108,6 +112,9 @@ footer {
         padding: 20px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
+        top: 50%; /* Keep the text box centered */
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     button {
