@@ -12,72 +12,64 @@ body {
     background-size: cover;
     color: #333;
     margin: 0;
-    min-height: 100vh; /* Ensure full height on all devices */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); /* For notched devices */
-    flex-direction: column; /* Allow header and footer to align properly */
 }
 
-/* Header at the top */
-header {
-    background-color: rgba(255, 255, 255, 0.8); /* Light color with transparency */
-    padding: 5px 10px; /* Matching padding to footer */
-    font-size: 10px; /* Matching font size to footer */
-    text-align: center;
-    width: 100%;
-    color: #666666; /* Slightly darker text color */
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    z-index: 1000; /* Ensure header is above other content */
-}
-
-/* Wrapper to limit width and centralize content */
+/* Wrapper to limit width */
 .wrapper {
-    width: 100%;
     max-width: 414px; /* Common mobile width */
-    margin: 60px auto 20px auto; /* Center the content and allow space for header */
-    padding: 20px;
-    text-align: center;
-    background-color: rgba(15, 17, 18, 0.8); /* Match the bottom black color of the footer with slight transparency */
-    border-radius: 15px;
+    margin: 0 auto; /* Center the content */
+    border-left: 2px solid #dddddd; /* Add left border */
+    border-right: 2px solid #dddddd; /* Add right border */
+    background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
+    height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the start */
     align-items: center;
+    position: relative;
+    padding: 20px 0; /* Adjust padding for better spacing */
 }
 
 /* Heading style */
 h1 {
-    font-size: 32px;
+    font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
-    margin-bottom: 40px; /* Set margin to space it properly above the text box */
+    text-align: center;
+    margin-bottom: 60px; /* Set margin to space it properly above the text box */
+    position: relative;
+    top: -120px; /* Adjust this value to move the title higher up */
 }
 
-/* Joke display box style */
+/* Joke display box style - Independent of the heading */
 .joke-box {
-    font-size: 20px;
-    width: 100%;
+    font-size: 20px; /* Adjusted font size */
+    width: calc(100% - 40px); /* Ensuring space from the edges */
     max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Black with more transparency */
+    padding: 20px; /* Increase padding inside the text box */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
     color: #ffffff; /* White color for text */
     text-align: center; /* Ensure multiline text is centered */
-    margin-bottom: 20px; /* Space between joke box and button */
+    border: none; /* Remove white outline */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 50%; /* Center the text box vertically */
+    left: 50%; /* Center the text box horizontally */
+    transform: translate(-50%, -50%); /* Offset the text box by half of its own size */
 }
 
-/* Button style */
+/* Button style - Independent of the text box */
 button {
-    padding: 15px 30px;
+    padding: 15px 30px; /* Increase padding for the button */
     font-size: 18px;
     background-color: #28a745;
     color: white;
@@ -86,51 +78,60 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 320px;
+    width: 320px; /* Fixed width for the button */
     text-align: center;
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 15%; /* Position the button slightly above the bottom of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset the button horizontally by half of its width */
 }
 
 button:hover {
     background-color: #218838;
-    transform: scale(1.05);
+    transform: translateX(-50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 /* Footer at the bottom */
 footer {
     background-color: rgba(255, 255, 255, 0.8); /* Light color with transparency */
-    padding: 5px 10px;
+    padding: 5px 10px; /* Reduced padding */
     font-size: 10px; /* Smaller font size */
     text-align: center;
     width: 100%;
-    margin-top: 20px;
-    color: #666666; /* Slightly darker text color */
     position: absolute;
     bottom: 0;
     left: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #666666; /* Slightly darker text color */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
-        margin-bottom: 30px; /* Adjust margin for smaller screens */
+        margin-bottom: 40px; /* Match margin with the spacing between text box and button */
+        top: -80px; /* Adjust this value for mobile to move the title higher */
     }
 
     .joke-box {
         font-size: 18px;
-        padding: 15px;
+        padding: 20px;
+        width: calc(100% - 40px); /* Ensuring space from the edges */
+        max-width: 500px; /* Set maximum width to prevent it from expanding too much */
+        top: 50%; /* Keep the text box centered */
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     button {
-        padding: 12px 25px;
+        padding: 15px 25px; /* Adjust padding for smaller screens */
         font-size: 16px;
-        width: 100%;
-        max-width: 320px;
+        width: 320px; /* Fixed width for the button */
+        bottom: 15%; /* Maintain button position slightly above the bottom */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    footer, header {
+    footer {
         padding: 4px 8px;
         font-size: 9px;
     }
