@@ -31,9 +31,10 @@ body {
     height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Distribute space evenly between elements */
+    justify-content: space-between; /* Spread out elements more */
     align-items: center;
     position: relative;
+    padding: 60px 0; /* Add padding to top and bottom to increase spacing */
 }
 
 /* Heading style */
