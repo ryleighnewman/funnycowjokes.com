@@ -33,6 +33,7 @@ body {
     grid-template-rows: 1fr 1fr 1fr; /* Divide into three equal sections */
     align-items: center;
     justify-items: center;
+    gap: 20px; /* Add spacing between rows */
     position: relative;
 }
 
@@ -41,6 +42,7 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
+    padding-bottom: 20px; /* Increase spacing below the heading */
     grid-row: 1 / 2; /* Place in the first section */
 }
 
@@ -49,7 +51,7 @@ h1 {
     font-size: 20px; /* Adjusted font size */
     width: calc(100% - 40px); /* Ensuring space from the edges */
     max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-    padding: 15px;
+    padding: 20px; /* Increase padding inside the text box */
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
     display: flex;
@@ -62,7 +64,7 @@ h1 {
 
 /* Button style */
 button {
-    padding: 12px 24px;
+    padding: 15px 30px; /* Increase padding for the button */
     font-size: 18px;
     background-color: #28a745;
     color: white;
@@ -71,7 +73,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    width: 300px; /* Fixed width for the button */
+    width: 320px; /* Slightly increase the width for the button */
     text-align: center;
     grid-row: 3 / 4; /* Place in the third section */
 }
@@ -98,19 +100,20 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
+        padding-bottom: 15px; /* Adjust spacing for smaller screens */
     }
 
     .joke-box {
         font-size: 18px;
-        padding: 15px;
+        padding: 20px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
     }
 
     button {
-        padding: 12px 20px;
+        padding: 15px 25px; /* Adjust padding for smaller screens */
         font-size: 16px;
-        width: 300px; /* Fixed width for the button */
+        width: 320px; /* Slightly increase the width for the button */
     }
 
     footer {
