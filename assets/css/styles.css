@@ -19,61 +19,56 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
     height: 100%;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     padding: 20px;
 }
 
-/* Inner container for content with fixed resolution */
+/* Inner container for content with black transparent background */
 .inner-container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Light color with transparency */
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with more transparency */
+    padding: 40px; /* More padding for better spacing */
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-    width: 80%;
+    max-width: 500px;
+    width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 60vh; /* Ensures content is centered vertically */
 }
 
 /* Heading style */
 h1 {
-    font-size: 24px; /* Adjusted font size for better visibility */
-    margin-bottom: 20px;
+    font-size: 36px; /* Larger font size for the header */
+    margin-bottom: 30px;
     color: #ffffff; /* White color for text */
 }
 
 /* Joke display box style */
 .joke-box {
-    font-size: 18px;
+    font-size: 22px; /* Slightly larger font size */
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 20px; /* Adjusted margin */
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
-    border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff; /* White color for text */
+    border: none; /* Remove white outline */
 }
 
 /* Button style */
 button {
-    padding: 12px 24px; /* Adjusted padding */
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px; /* Larger font size */
     background-color: #28a745;
     color: white;
     border: none;
@@ -81,7 +76,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 10px;
+    margin-top: 20px; /* Increased margin for better spacing */
 }
 
 button:hover {
@@ -92,11 +87,11 @@ button:hover {
 /* Footer at the bottom */
 footer {
     background-color: rgba(255, 255, 255, 0.8); /* Light color with transparency */
-    padding: 8px 15px;
-    font-size: 12px;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 10px; /* Smaller font size */
     text-align: center;
     width: 100%;
-    position: absolute; /* Ensures footer stays at the bottom */
+    position: absolute;
     bottom: 0;
     left: 0;
     color: #666666; /* Slightly darker text color */
@@ -106,27 +101,26 @@ footer {
 @media (max-width: 600px) {
     .inner-container {
         width: 90%;
-        padding: 15px;
-        min-height: 50vh;
+        padding: 30px;
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .joke-box {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 20px;
+        padding: 15px;
         width: 100%;
     }
 
     button {
-        padding: 10px 20px;
-        font-size: 14px;
+        padding: 12px 25px;
+        font-size: 16px;
     }
 
     footer {
-        padding: 6px 12px;
-        font-size: 10px;
+        padding: 4px 8px;
+        font-size: 9px;
     }
 }
