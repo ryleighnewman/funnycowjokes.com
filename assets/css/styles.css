@@ -23,36 +23,36 @@ body {
 /* Wrapper to limit width */
 .wrapper {
     max-width: 414px; /* Common mobile width */
+    width: 100%; /* Ensure full width is utilized */
     margin: 0 auto; /* Center the content */
     border-left: 2px solid #dddddd; /* Add left border */
     border-right: 2px solid #dddddd; /* Add right border */
     background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
-    height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
+    min-height: 100vh; /* Ensure the wrapper takes up at least the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align items to the start */
     align-items: center;
-    position: relative;
-    padding: 20px 0; /* Adjust padding for better spacing */
+    padding: 5vh 0; /* Use responsive units for padding */
 }
 
 /* Heading style */
 h1 {
-    font-size: 32px; /* Slightly reduced font size for mobile */
+    font-size: 2rem; /* Use relative units for font size */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: 60px; /* Set margin to space it properly above the text box */
+    margin-bottom: 3rem; /* Adjust margin with relative units */
     position: relative;
-    top: -120px; /* Adjust this value to move the title higher up */
+    top: -2rem; /* Adjust positioning to be more responsive */
 }
 
 /* Joke display box style - Independent of the heading */
 .joke-box {
-    font-size: 20px; /* Adjusted font size */
-    width: calc(100% - 40px); /* Ensuring space from the edges */
+    font-size: 1.25rem; /* Adjusted font size */
+    width: calc(100% - 2rem); /* Ensuring space from the edges */
     max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-    padding: 20px; /* Increase padding inside the text box */
+    padding: 1.5rem; /* Increase padding inside the text box */
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
     border-radius: 10px;
     display: flex;
@@ -61,16 +61,13 @@ h1 {
     color: #ffffff; /* White color for text */
     text-align: center; /* Ensure multiline text is centered */
     border: none; /* Remove white outline */
-    position: fixed; /* Fixed positioning relative to the viewport */
-    top: 50%; /* Center the text box vertically */
-    left: 50%; /* Center the text box horizontally */
-    transform: translate(-50%, -50%); /* Offset the text box by half of its own size */
+    margin: 2rem 0; /* Add margin for spacing */
 }
 
 /* Button style - Independent of the text box */
 button {
-    padding: 15px 30px; /* Increase padding for the button */
-    font-size: 18px;
+    padding: 1rem 2rem; /* Use relative units for padding */
+    font-size: 1rem;
     background-color: #28a745;
     color: white;
     border: none;
@@ -78,24 +75,22 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    width: 320px; /* Fixed width for the button */
+    width: 80%; /* Adjust width to be responsive */
+    max-width: 320px;
     text-align: center;
-    position: fixed; /* Fixed positioning relative to the viewport */
-    bottom: 15%; /* Position the button slightly above the bottom of the viewport */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Offset the button horizontally by half of its width */
+    margin: 0 auto; /* Center the button horizontally */
     touch-action: manipulation; /* Prevents default touch behaviors */
     -webkit-tap-highlight-color: transparent; /* Remove highlight on tap */
 }
 
 button:hover {
     background-color: #218838;
-    transform: translateX(-50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
+    transform: scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 button:active {
     background-color: #1e7e34; /* Darker shade when active */
-    transform: translateX(-50%) scale(0.95); /* Slightly reduce size when pressed */
+    transform: scale(0.95); /* Slightly reduce size when pressed */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow for pressed effect */
 }
 
@@ -103,44 +98,34 @@ button:active {
 footer {
     background-color: rgba(255, 255, 255, 0.8); /* Light color with transparency */
     padding: 5px 10px; /* Reduced padding */
-    font-size: 10px; /* Smaller font size */
+    font-size: 0.8rem; /* Smaller font size */
     text-align: center;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative; /* Ensure it stays at the bottom of the content */
+    margin-top: auto; /* Push footer to the bottom of the page */
     color: #666666; /* Slightly darker text color */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
     h1 {
-        font-size: 28px;
-        margin-bottom: 40px; /* Match margin with the spacing between text box and button */
-        top: -80px; /* Adjust this value for mobile to move the title higher */
+        font-size: 1.75rem; /* Adjust font size for smaller screens */
+        margin-bottom: 2.5rem; /* Match margin with the spacing between text box and button */
+        top: -1.5rem; /* Adjust positioning */
     }
 
     .joke-box {
-        font-size: 18px;
-        padding: 20px;
-        width: calc(100% - 40px); /* Ensuring space from the edges */
-        max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-        top: 50%; /* Keep the text box centered */
-        left: 50%;
-        transform: translate(-50%, -50%);
+        font-size: 1rem; /* Adjust font size */
+        padding: 1.25rem; /* Adjust padding for smaller screens */
     }
 
     button {
-        padding: 15px 25px; /* Adjust padding for smaller screens */
-        font-size: 16px;
-        width: 320px; /* Fixed width for the button */
-        bottom: 15%; /* Maintain button position slightly above the bottom */
-        left: 50%;
-        transform: translateX(-50%);
+        padding: 0.75rem 1.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
     }
 
     footer {
         padding: 4px 8px;
-        font-size: 9px;
+        font-size: 0.7rem;
     }
 }

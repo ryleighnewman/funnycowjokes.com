@@ -21,16 +21,13 @@ document.getElementById('joke-button').addEventListener('click', function() {
     // Display the joke
     jokeBox.textContent = getRandomJoke();
 
-    // Force reflow to reset the button's animation
-    jokeButton.classList.remove('active');
-    
-    void jokeButton.offsetWidth; // Trigger a reflow, flushing the CSS changes
-    
-    jokeButton.classList.add('active'); // Re-add the active class
+    // Temporarily disable the button to prevent it from staying in a pressed state
+    jokeButton.disabled = true;
+    jokeButton.style.backgroundColor = '#1e7e34'; // Optional: change the color to indicate press
 
-    // Reset the button after a short delay
     setTimeout(function() {
-        jokeButton.classList.remove('active');
+        jokeButton.disabled = false;
+        jokeButton.style.backgroundColor = '#28a745'; // Reset to the original color
         jokeButton.blur(); // Remove focus from the button
     }, 300); // Adjust the delay time as needed
 });
