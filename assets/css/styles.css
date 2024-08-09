@@ -18,6 +18,7 @@ body {
     align-items: center;
     overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); /* For notched devices */
+    position: relative; /* Necessary for positioning absolute elements relative to the viewport */
 }
 
 /* Wrapper to limit width */
@@ -29,10 +30,10 @@ body {
     background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
     height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Outer container to center content */
@@ -59,7 +60,6 @@ body {
     flex-direction: column;
     justify-content: center; /* Center content within the container */
     align-items: center;
-    position: relative; /* Make the inner-container the positioning reference for absolute elements */
 }
 
 /* Heading style */
@@ -87,7 +87,7 @@ h1 {
     border: none; /* Remove white outline */
 }
 
-/* Button style - Fixed width and independent positioning */
+/* Button style - Independent positioning */
 button {
     padding: 12px 24px;
     font-size: 18px;
@@ -99,17 +99,16 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 300px; /* Fixed width for the button */
-    max-width: 300px;
     text-align: center;
-    position: absolute; /* Position the button absolutely */
-    top: 50%; /* Center the button vertically */
-    left: 50%; /* Center the button horizontally */
-    transform: translate(-50%, -50%); /* Offset the button by half of its own size */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 10%; /* Position the button slightly above the bottom of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset the button horizontally by half of its width */
 }
 
 button:hover {
     background-color: #218838;
-    transform: translate(-50%, -50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
+    transform: translateX(-50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 /* Footer at the bottom */
@@ -159,10 +158,9 @@ footer {
         padding: 12px 20px;
         font-size: 16px;
         width: 300px; /* Fixed width for the button */
-        max-width: 300px;
-        top: 50%; /* Keep button centered */
+        bottom: 10%; /* Maintain button position slightly above the bottom */
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
     }
 
     footer {
