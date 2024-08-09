@@ -31,10 +31,10 @@ body {
     height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spread out elements more */
+    justify-content: space-between; /* Spread out elements */
     align-items: center;
     position: relative;
-    padding: 60px 0; /* Add padding to top and bottom to increase spacing */
+    padding: 40px 0; /* Adjust padding for better spacing */
 }
 
 /* Heading style */
@@ -42,7 +42,6 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: auto; /* Ensure some spacing below */
 }
 
 /* Joke display box style */
@@ -58,10 +57,10 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
-    margin: auto 0; /* Center the text box vertically with equal space above and below */
+    margin: 20px 0; /* Add margin to create spacing between elements */
 }
 
-/* Button style */
+/* Button style - Independent of the text box */
 button {
     padding: 15px 30px; /* Increase padding for the button */
     font-size: 18px;
@@ -72,14 +71,17 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    width: 320px; /* Slightly increase the width for the button */
+    width: 320px; /* Fixed width for the button */
     text-align: center;
-    margin-top: auto; /* Ensure some spacing above */
+    position: fixed; /* Fixed positioning relative to the viewport */
+    bottom: 15%; /* Position the button slightly above the bottom of the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Offset the button horizontally by half of its width */
 }
 
 button:hover {
     background-color: #218838;
-    transform: scale(1.05); /* Ensure hover effect also accounts for the centering transform */
+    transform: translateX(-50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 /* Footer at the bottom */
@@ -111,7 +113,10 @@ footer {
     button {
         padding: 15px 25px; /* Adjust padding for smaller screens */
         font-size: 16px;
-        width: 320px; /* Slightly increase the width for the button */
+        width: 320px; /* Fixed width for the button */
+        bottom: 15%; /* Maintain button position slightly above the bottom */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     footer {
