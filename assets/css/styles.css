@@ -42,7 +42,7 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: 100px; /* Increase bottom margin to create space above the text box */
+    margin-bottom: 300px; /* Increase bottom margin to create space above the text box */
 }
 
 /* Joke display box style - Independent of the heading */
