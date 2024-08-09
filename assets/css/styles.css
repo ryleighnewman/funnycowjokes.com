@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensure full-screen height */
-    overflow: hidden; /* Prevent scrolling if content overflows */
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Outer container to fix resolution and center content */
@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Set a fixed max-width */
+    max-width: 1200px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -26,7 +26,7 @@ body {
 /* Inner container for content with fixed resolution */
 .inner-container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    background-color: rgba(255, 255, 255, 0.7); /* Adjusted transparency */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -35,7 +35,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Heading style */
+/* Heading style - Centering Funny Cow Jokes text */
 h1 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -46,11 +46,11 @@ h1 {
 .joke-box {
     font-size: 20px;
     width: 100%;
-    max-width: 300px; /* Maintain box within bounds */
+    max-width: 300px;
     height: auto;
-    margin: 0 auto 30px auto; /* Center and add margin */
+    margin: 0 auto 30px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.8); /* Transparent background */
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,6 +71,7 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Added margin to separate from joke box */
 }
 
 button:hover {
@@ -78,10 +79,11 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Footer at the bottom */
+/* Footer at the bottom - Made smaller */
 footer {
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 10px 20px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
     text-align: center;
     width: 100%;
     position: absolute;
@@ -109,5 +111,10 @@ footer {
     button {
         padding: 12px 25px;
         font-size: 16px;
+    }
+
+    footer {
+        padding: 8px 15px; /* Adjust footer padding on smaller screens */
+        font-size: 12px; /* Adjust footer font size on smaller screens */
     }
 }
