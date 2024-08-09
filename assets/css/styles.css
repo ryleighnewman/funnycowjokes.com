@@ -57,8 +57,9 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure items are spaced independently */
+    justify-content: center; /* Center content within the container */
     align-items: center;
+    position: relative; /* Make the inner-container the positioning reference for absolute elements */
 }
 
 /* Heading style */
@@ -73,7 +74,8 @@ h1 {
 /* Joke display box style */
 .joke-box {
     font-size: 20px; /* Adjusted font size */
-    width: 100%;
+    width: calc(100% - 40px); /* Ensuring space from the edges */
+    max-width: 500px; /* Set maximum width to prevent it from expanding too much */
     margin-bottom: 20px;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
@@ -85,7 +87,7 @@ h1 {
     border: none; /* Remove white outline */
 }
 
-/* Button style */
+/* Button style - Fixed width and independent positioning */
 button {
     padding: 12px 24px;
     font-size: 18px;
@@ -96,16 +98,18 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-    width: 100%; /* Ensure button is full width of its container */
-    max-width: 300px; /* Set max width for button */
+    width: 300px; /* Fixed width for the button */
+    max-width: 300px;
     text-align: center;
-    align-self: center; /* Center the button within the container */
+    position: absolute; /* Position the button absolutely */
+    top: 50%; /* Center the button vertically */
+    left: 50%; /* Center the button horizontally */
+    transform: translate(-50%, -50%); /* Offset the button by half of its own size */
 }
 
 button:hover {
     background-color: #218838;
-    transform: scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05); /* Ensure hover effect also accounts for the centering transform */
 }
 
 /* Footer at the bottom */
@@ -147,13 +151,18 @@ footer {
     .joke-box {
         font-size: 18px;
         padding: 15px;
+        width: calc(100% - 40px); /* Ensuring space from the edges */
+        max-width: 500px; /* Set maximum width to prevent it from expanding too much */
     }
 
     button {
         padding: 12px 20px;
         font-size: 16px;
-        width: 100%;
+        width: 300px; /* Fixed width for the button */
         max-width: 300px;
+        top: 50%; /* Keep button centered */
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     footer {
