@@ -1,3 +1,11 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is applied globally */
+}
+
 /* Full-screen cow pattern background */
 body {
     font-family: Arial, sans-serif;
@@ -11,6 +19,21 @@ body {
     align-items: center;
     overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); /* For notched devices */
+}
+
+/* Wrapper to limit width */
+.wrapper {
+    max-width: 414px; /* Common mobile width */
+    margin: 0 auto; /* Center the content */
+    border-left: 2px solid #dddddd; /* Add left border */
+    border-right: 2px solid #dddddd; /* Add right border */
+    background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
+    height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Outer container to center content */
@@ -75,6 +98,9 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
+    width: calc(100% - 60px); /* Ensures button doesn't touch the edges */
+    max-width: 300px; /* Set max width for button */
+    text-align: center;
 }
 
 button:hover {
@@ -126,6 +152,8 @@ footer {
     button {
         padding: 12px 20px;
         font-size: 16px;
+        width: calc(100% - 60px); /* Ensures button doesn't touch the edges */
+        max-width: 300px;
     }
 
     footer {
