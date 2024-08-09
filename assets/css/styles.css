@@ -34,7 +34,7 @@ body {
     justify-content: flex-start; /* Align items to the start */
     align-items: center;
     position: relative;
-    padding: 40px 0; /* Adjust padding for better spacing */
+    padding: 20px 0; /* Adjust padding for better spacing */
 }
 
 /* Heading style */
@@ -42,7 +42,7 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    margin-bottom: 60px; /* Set margin to match the spacing between text box and button */
+    margin-bottom: 40px; /* Set margin to match the spacing between text box and button */
 }
 
 /* Joke display box style - Independent of the heading */
@@ -105,7 +105,7 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
-        margin-bottom: 60px; /* Adjust margin for smaller screens */
+        margin-bottom: 40px; /* Match margin with the spacing between text box and button */
     }
 
     .joke-box {
@@ -113,7 +113,7 @@ footer {
         padding: 20px;
         width: calc(100% - 40px); /* Ensuring space from the edges */
         max-width: 500px; /* Set maximum width to prevent it from expanding too much */
-        top: 50%; /* Keep the text box centered */
+        top: 45%; /* Adjusted position for mobile */
         left: 50%;
         transform: translate(-50%, -50%);
     }
