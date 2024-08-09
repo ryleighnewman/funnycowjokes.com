@@ -29,11 +29,10 @@ body {
     background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
     height: 100%; /* Make sure the wrapper takes up the full height of the viewport */
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr; /* Divide into three equal sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribute space evenly between elements */
     align-items: center;
-    justify-items: center;
-    gap: 20px; /* Add spacing between rows */
     position: relative;
 }
 
@@ -42,8 +41,6 @@ h1 {
     font-size: 32px; /* Slightly reduced font size for mobile */
     color: #ffffff; /* White color for text */
     text-align: center;
-    padding-bottom: 20px; /* Increase spacing below the heading */
-    grid-row: 1 / 2; /* Place in the first section */
 }
 
 /* Joke display box style */
@@ -59,7 +56,6 @@ h1 {
     align-items: center;
     color: #ffffff; /* White color for text */
     border: none; /* Remove white outline */
-    grid-row: 2 / 3; /* Place in the second section */
 }
 
 /* Button style */
@@ -75,7 +71,6 @@ button {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 320px; /* Slightly increase the width for the button */
     text-align: center;
-    grid-row: 3 / 4; /* Place in the third section */
 }
 
 button:hover {
@@ -100,7 +95,6 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 28px;
-        padding-bottom: 15px; /* Adjust spacing for smaller screens */
     }
 
     .joke-box {
