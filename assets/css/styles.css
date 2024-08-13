@@ -36,14 +36,13 @@ body {
     padding: 20px 0;
 }
 
-/* Heading style */
 h1 {
     font-size: 6vw; /* Dynamic font size based on viewport width */
     color: #ffffff;
     text-align: center;
     margin-bottom: 5vh;
     position: relative;
-    top: -10vh; /* Adjusted for dynamic positioning */
+    top: -20vh; /* Increase negative value to move the title higher up */
 }
 
 /* Joke display box */
