@@ -28,7 +28,7 @@ body {
     text-align: center;
     width: 100%;
     max-width: 90vw;
-    height: 90vh; /* Adjust to ensure vertical centering */
+    height: 90vh;
     padding: 20px;
     border-left: 2px solid #dddddd;
     border-right: 2px solid #dddddd;
@@ -55,7 +55,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0; /* Space around the joke box */
+    margin: 20px 0;
+    text-align: center;
 }
 
 /* Button at the bottom */
@@ -70,7 +71,7 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 60vw;
-    margin-bottom: 10vh; /* Ensure button stays above the footer */
+    margin-bottom: 10vh;
 }
 
 button:hover {
