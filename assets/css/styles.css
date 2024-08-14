@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI Light', sans-serif;
+    outline: none; /* Remove outlines from all elements */
 }
 
 /* Full-screen background */
@@ -47,12 +48,12 @@ h1 {
 /* Joke display box */
 .joke-box {
     font-size: 5vw;
-    width: 80vw;
-    max-width: 500px;
+    width: 85vw; /* Increase width of the joke box */
+    max-width: 600px; /* Adjust max width */
     padding: 4vw;
     background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; /* Increase border-radius for more rounded corners */
+    border: none; /* Remove any border */
     color: #ffffff;
     flex: 1;
     display: flex;
@@ -75,7 +76,7 @@ button {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    width: 60vw;
+    width: 50vw; /* Make the button narrower */
     margin-bottom: 10vh;
 }
 
@@ -119,7 +120,7 @@ footer {
     button {
         padding: 2vh 4vw;
         font-size: 5vw;
-        width: 70vw;
+        width: 60vw;
     }
 
     footer {
