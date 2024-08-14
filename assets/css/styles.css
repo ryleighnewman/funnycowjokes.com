@@ -13,8 +13,7 @@ body {
     color: #333;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     overflow: hidden;
@@ -24,11 +23,12 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     width: 100%;
     max-width: 90vw;
+    height: 90vh; /* Adjust to ensure vertical centering */
     padding: 20px;
     border-left: 2px solid #dddddd;
     border-right: 2px solid #dddddd;
@@ -40,7 +40,6 @@ body {
 h1 {
     font-size: 6vw;
     color: #ffffff;
-    margin-bottom: 2vh;
 }
 
 /* Joke display box */
@@ -52,7 +51,11 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     color: #ffffff;
-    margin-bottom: 2vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Space around the joke box */
 }
 
 /* Button at the bottom */
@@ -67,8 +70,7 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 60vw;
-    margin-top: 2vh;
-    text-align: center;
+    margin-bottom: 10vh; /* Ensure button stays above the footer */
 }
 
 button:hover {
@@ -99,7 +101,6 @@ footer {
 @media (max-width: 600px) {
     h1 {
         font-size: 7vw;
-        margin-bottom: 3vh;
     }
 
     .joke-box {
