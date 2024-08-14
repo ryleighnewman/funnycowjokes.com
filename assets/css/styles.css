@@ -11,38 +11,36 @@ body {
     background: url('/assets/images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
-    margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    overflow: hidden;
 }
 
 /* Wrapper */
 .wrapper {
-    max-width: 90vw;
-    margin: 0 auto;
-    border-left: 2px solid #dddddd;
-    border-right: 2px solid #dddddd;
-    background-color: rgb(15, 17, 18);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    min-height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 90vw;
+    padding: 20px;
+    border-left: 2px solid #dddddd;
+    border-right: 2px solid #dddddd;
+    background-color: rgba(15, 17, 18, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Heading */
 h1 {
-    font-size: 6vw; /* Dynamic font size based on viewport width */
+    font-size: 6vw;
     color: #ffffff;
-    text-align: center;
     margin-bottom: 5vh;
-    position: relative;
-    top: -20vh; /* Increase negative value to move the title higher up */
 }
 
 /* Joke display box */
@@ -53,15 +51,10 @@ h1 {
     padding: 4vw;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #ffffff;
-    text-align: center;
-    position: relative;
-    margin: 0 auto;
 }
 
+/* Button at the bottom */
 button {
     padding: 3vh 5vw;
     font-size: 4vw;
@@ -73,12 +66,8 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     width: 60vw;
+    margin-top: auto;
     text-align: center;
-    position: relative; /* Changed from fixed to relative */
-    margin: 5vh auto; /* Centered the button with respect to the viewport */
-    top: 10vh; /* Adjust this value to position the button where you need it */
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
@@ -99,10 +88,10 @@ footer {
     font-size: 2.5vw;
     text-align: center;
     width: 100%;
+    color: #666666;
     position: absolute;
     bottom: 0;
     left: 0;
-    color: #666666;
 }
 
 /* Responsive adjustments */
@@ -110,7 +99,6 @@ footer {
     h1 {
         font-size: 7vw;
         margin-bottom: 3vh;
-        top: -8vh;
     }
 
     .joke-box {
