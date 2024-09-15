@@ -14,6 +14,15 @@ body {
     color: #333;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center; /* center vertically */
+    justify-content: center; /* center horizontally */
+}
+
+/* prevent zooming and scrolling */
+html, body {
+    overflow: hidden;
+    touch-action: none;
 }
 
 /* main content box */
@@ -21,12 +30,12 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     padding: 20px;
-    margin: 20px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: calc(100% - 40px); /* ensure padding on sides */
+    margin: 0 auto; /* center horizontally */
     color: #ffffff;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* heading style */
@@ -90,14 +99,13 @@ footer p {
     margin: 0;
 }
 
-/* prevent zooming and scrolling */
-html, body {
-    overflow: hidden;
-    touch-action: none;
-}
-
 /* responsive adjustments for small screens */
 @media (max-width: 600px) {
+    .wrapper {
+        width: calc(100% - 40px); /* maintain padding on sides */
+        margin: 20px auto; /* ensure margin on top and bottom */
+    }
+
     h1 {
         font-size: 6vw;
     }
