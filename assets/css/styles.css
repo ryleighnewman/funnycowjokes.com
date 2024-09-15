@@ -1,83 +1,65 @@
-/* Basic reset */
+/* reset basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI Light', sans-serif;
-    outline: none; /* Remove outlines from all elements */
+    outline: none;
 }
 
-/* Full-screen background */
+/* full-screen background image */
 body {
     background: url('/assets/images/background.png') no-repeat center center fixed;
     background-size: cover;
     color: #333;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     overflow: hidden;
 }
 
-/* Wrapper */
+/* main content box */
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    max-width: 90vw;
-    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
     padding: 20px;
-    border-left: 2px solid rgba(255, 255, 255, 0.3);
-    border-right: 2px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(15, 17, 18, 0.85);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
-
-/* Heading */
-h1 {
-    font-size: 6vw;
+    margin: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    margin-bottom: 1vh;
-}
-
-/* Joke display box */
-.joke-box {
-    font-size: 5vw;
-    width: 85vw; /* Increase width of the joke box */
-    max-width: 600px; /* Adjust max width */
-    padding: 4vw;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 20px; /* Increase border-radius for more rounded corners */
-    border: none; /* Remove any border */
-    color: #ffffff;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* heading style */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* joke display box */
+.joke-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Button at the bottom */
+/* button style */
 button {
-    padding: 3vh 5vw;
-    font-size: 4vw;
+    padding: 15px 30px;
+    font-size: clamp(1rem, 4vw, 1.5rem);
     background: linear-gradient(45deg, #28a745, #218838);
     color: white;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    width: 50vw; /* Make the button narrower */
-    margin-bottom: 10vh;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
 }
 
 button:hover {
@@ -88,43 +70,49 @@ button:hover {
 button:active {
     background: linear-gradient(45deg, #1e7e34, #1c7430);
     transform: scale(0.95);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer at the bottom */
+/* footer style */
 footer {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 5px 10px;
-    font-size: 2vw;
+    font-size: 0.9rem;
     text-align: center;
     width: 100%;
     color: #666666;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+footer p {
+    margin: 0;
+}
+
+/* prevent zooming and scrolling */
+html, body {
+    overflow: hidden;
+    touch-action: none;
+}
+
+/* responsive adjustments for small screens */
 @media (max-width: 600px) {
     h1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     .joke-box {
-        font-size: 6vw;
+        font-size: 5vw;
         padding: 5vw;
-        width: 90vw;
     }
 
     button {
         padding: 2vh 4vw;
-        font-size: 5vw;
-        width: 60vw;
+        font-size: 4vw;
     }
 
     footer {
-        padding: 4px 8px;
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
